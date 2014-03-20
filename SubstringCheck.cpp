@@ -1,9 +1,10 @@
 #include <iostream>
 #include <cstring>
+#include <string>
 using namespace std;
 
 
-bool isSubString(String a, String b){
+bool isSubString(string a, string b){
 	int lA = a.length();
 	int lB = b.length();
 	
@@ -17,14 +18,16 @@ bool isSubString(String a, String b){
 		return true;
 	}
 	else{
-		
+		if(a.find(b)!=a.npos)
+			return true;
+		else return false;
 	}
 }
 
 int main(){
 	int t=24;
 	while(t--){
-		String a, b;
+		string a, b;
 		cin >> a >> b;
 		
 		if(isSubString(a,b))
